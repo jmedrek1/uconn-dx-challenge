@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UConn DX Group Questions</title>
+    </head>
+    <body style="font-family : sans-serif; text-align : center;">
+        <h2>UConn DX Group Questions</h2>
+        <h4>By: John "Jack" Medrek</h4>
+        <br>
+
+        <!--Question 1-->
+        <h3>What solution would you use for mapping? Why? (The DXG has used MapBox before)</h3>
+        <p>
+            I would recommend we stay using MapBox. The other main option is Google 
+            Maps API, which while being more feature-rich is also quite a bit more expensive. 
+            Because of the scale of our site, it probably makes more sense to go with the 
+            cheaper option: MapBox.
+        </p>
+        
+        <!--Question 2-->
+        <h3>We probably can’t afford to make a bunch of native apps (iOS, Android, etc). How would 
+            we make this thing cross-platform?</h3>
+        <p>
+            One way to make this app cross-platform would be to make it as a PWA (progressive web app). This would be a website that behaves and looks like a mobile app, and it would provide the option to work off a single codebase. Any device with a browser would be able to use it.
+        </p>
+
+        <!--Question 3-->
+        <h3>Any front-end frameworks you’d suggest we use? Why?</h3>
+        <p>
+            I would suggest Angular.js as a front-end framework. For starters, it’s very popular and thus has a large amount of corresponding information online to answer any questions we might have while using it. More technically, Angular can use two-way binding to keep the POIs synchronized on the mobile app we create and its corresponding website. 
+        </p>
+
+        <!--Question 4-->
+        <h3>Any back-end technology you’d suggest we use? Why?</h3>
+        <p>
+            If we choose Angular.js as our front-end framework, we can choose almost any back-end technology, the only requirement is that said back-end technology can provide a RESTful API that accepts JSON. Given this, I would suggest using Express.js on the Node.js platform, because that leaves just one language to learn, JavaScript.
+        </p>
+
+        <!--Question 5-->
+        <h3>How do we handle the login stuff?</h3>
+        <p>
+            While we could build our own login table and encrypt the users’ data ourselves, it would probably be best to use something like OAuth to allow sites like Google or Facebook to handle our users’ authentication. It would be easier and safer to use these systems which have been thoroughly tested than to build our own.
+        </p>
+
+        <!--Question 6-->
+        <h3>Where should we store the data on uploaded POIs and what does that data look like? 
+            (The DXG has used Cloud Firestore and Supabase a lot lately) </h3>
+        <p>
+            While Supabase and Cloud Firestore are good database technologies, I think another way our data could be stored on a database is using MongoDB. This is mainly because of its ease of use with the previously mentioned front-end and back-end technologies. MongoDB, along with Angular.js and Express.js, forms the MEAN stack — an all-JS web framework.
+        </p>
+        <p>
+            That data would be in the form of an image file, a string containing the title/name of the POI, and a string containing the POI’s description.
+        </p>
+
+        <!--Question 7-->
+        <h3>What happens if the researchers lose cell service in the middle of the state forest?</h3>
+        <p>
+            If we use a PWA as previously mentioned, the only point when our PWA would require an Internet connection is when it’s being installed or synced to the website. If it’s permissible to wait until there is cell service to update the website, then a PWA should not require cell service otherwise.
+        </p>
+        <br>
+        <br>
+    </body>
+</html>
